@@ -11,9 +11,11 @@ public class TestSwing {
     {
         LoginFrame fr=new LoginFrame();
         NewUser nu=new NewUser();
+        PasswordGenerator pwdframe=new PasswordGenerator();
         if(!fileCheck())
         {
             nu.setVisible(true);
+            pwdframe.setVisible(true);
         }
         else
         {

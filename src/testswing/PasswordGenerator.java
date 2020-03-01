@@ -129,7 +129,7 @@ public class PasswordGenerator extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(passwordtxt)
+                    .addComponent(passwordtxt, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
@@ -224,11 +224,13 @@ public class PasswordGenerator extends javax.swing.JFrame {
         int len= jSlider1.getValue();
         Random rndm_method = new Random(); 
         String password = ""; 
-        
+        if(values!="")
+        {
         for (int i = 0; i < len; i++) 
             password += values.charAt(rndm_method.nextInt(values.length())); 
         
         passwordtxt.setText(password);
+        }
     }
     public static void main(String args[]) {
         try {
